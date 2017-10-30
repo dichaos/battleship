@@ -38,7 +38,7 @@ namespace Battleship
                     {
                         for (int i = options.Row; i >= options.Row - (options.ShipSize - 1); i--)
                         {
-                            if ((!_battleField[i, options.Col].Available && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[i, options.Col])))
+                            if ((!_battleField[i, options.Col].AvailableToPlaceShip && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[i, options.Col])))
                             {
                                 return false;
                             }
@@ -53,7 +53,7 @@ namespace Battleship
                     {
                         for (int i = options.Col; i <= options.Col + (options.ShipSize - 1); i++)
                         {
-                            if ((!_battleField[options.Row, i].Available && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[options.Row, i])))
+                            if ((!_battleField[options.Row, i].AvailableToPlaceShip && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[options.Row, i])))
                             {
                                 return false;
                             }
@@ -68,7 +68,7 @@ namespace Battleship
                     {
                         for (int i = options.Row; i <= options.Row + (options.ShipSize - 1); i++)
                         {
-                            if ((!_battleField[i, options.Col].Available && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[i, options.Col])))
+                            if ((!_battleField[i, options.Col].AvailableToPlaceShip && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[i, options.Col])))
                             {
                                 return false;
                             }
@@ -83,7 +83,7 @@ namespace Battleship
                     {
                         for (int i = options.Col; i >= options.Col - (options.ShipSize - 1); i--)
                         {
-                            if ((!_battleField[options.Row, i].Available && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[options.Row, i])))
+                            if ((!_battleField[options.Row, i].AvailableToPlaceShip && cellsLeft == null) || (cellsLeft != null && !cellsLeft.Contains(_battleField[options.Row, i])))
                             {
                                 return false;
                             }

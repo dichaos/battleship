@@ -6,8 +6,9 @@ namespace Battleship
     public class Cell
     {
         public CellCondition Condition { get; private set; }
-        public bool Available { get { return Condition == CellCondition.EmptySea; } }
-        
+        public bool AvailableToPlaceShip { get { return Condition == CellCondition.EmptySea; } }
+        public bool AvailableToBomb { get { return Condition == CellCondition.EmptySea || Condition == CellCondition.ShipLocation; } }
+
         private Ship _ship;
         private int _size;
         private BattleField _battleField;
@@ -72,12 +73,12 @@ namespace Battleship
                 case CellCondition.EmptySeaBombed:
                     return "@"; 
                 case CellCondition.EmptySea:
-                    return "-";
+                    return " ";
                 case CellCondition.ShipLocation:
                     return _ship.ToString()[0].ToString();
             }
 
-            return "-";
+            return " ";
         }
     }
 }

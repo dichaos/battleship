@@ -5,9 +5,9 @@ namespace Battleship
 {
     public class BoardDrawer : IBoardDrawer
     {
-        private BattleField battleField;
+        private IBattleField battleField;
         private string name;
-        public BoardDrawer(BattleField _battleField, string _name)
+        public BoardDrawer(IBattleField _battleField, string _name)
         {
             battleField = _battleField;
             name = _name;

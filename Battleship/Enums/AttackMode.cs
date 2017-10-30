@@ -2,7 +2,8 @@
 {
     public enum AttackMode
     {
-        Exploratory = 0,
-        AfterHit = 1
+        NONE = 0,
+        Exploratory = 1,
+        AfterHit = 2,
     };
 }

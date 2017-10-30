@@ -55,6 +55,9 @@
     <Compile Include="Enums\ShipType.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="IBattleField.cs" />
+    <Compile Include="Players\AttackModes\AfterHitAttack.cs" />
+    <Compile Include="Players\AttackModes\ExploratoryAttack.cs" />
+    <Compile Include="Players\AttackModes\HitResult.cs" />
     <Compile Include="Players\HumanPlayer.cs" />
     <Compile Include="Drawing\IBoardDrawer.cs" />
     <Compile Include="Players\IPlayer.cs" />
