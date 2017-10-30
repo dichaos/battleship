@@ -5,8 +5,8 @@ namespace Battleship
 {
     public class BoardDrawer : IBoardDrawer
     {
-        private IBattleField battleField;
-        private string name;
+        private readonly IBattleField battleField;
+        private readonly string name;
         public BoardDrawer(IBattleField _battleField, string _name)
         {
             battleField = _battleField;
@@ -29,7 +29,7 @@ namespace Battleship
                     {
                         case CellCondition.ShipLocation:
                             if (hideLocations)
-                                row = row + "-";
+                                row = row + " ";
                             else
                                 row = row + battleField[j, k];
                             break;

@@ -7,7 +7,7 @@ namespace Battleship
 
     public class BattleField : IBattleField
     {
-        private Cell[,] _board;
+        private readonly Cell[,] _board;
         private List<Ship> _ships;
         private HashSet<ShipType> _shipsLeft;
         private HashSet<Cell> _cellsLeft;
@@ -44,7 +44,7 @@ namespace Battleship
             this._ships = new List<Ship>();
         }
         
-        internal void AddShip(Ship ship)
+        public void AddShip(Ship ship)
         {
             _ships.Add(ship);
             _shipsLeft.Add(ship.Type);

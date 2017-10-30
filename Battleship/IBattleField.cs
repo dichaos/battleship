@@ -10,5 +10,6 @@ namespace Battleship
         int Size { get; }
         HashSet<ShipType> ShipsLeft { get; }
         HashSet<Cell> CellsLeft { get; }
+        void AddShip(Ship ship);
     }
 }

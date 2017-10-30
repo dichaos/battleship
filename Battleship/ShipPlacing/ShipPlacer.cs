@@ -6,13 +6,13 @@ namespace Battleship
 {
     public abstract class ShipPlacer
     {
-        protected ShipType[] _ships;
-        protected BattleField _battleField;
+        protected readonly ShipType[] _ships;
+        protected readonly IBattleField _battleField;
 
         protected List<int> _lstSpacePerRow;
         protected List<int> _lstSpacePerCol;
 
-        public ShipPlacer(ShipType[] ships, BattleField battlefield)
+        public ShipPlacer(ShipType[] ships, IBattleField battlefield)
         {
             _ships = ships;
             _battleField = battlefield;

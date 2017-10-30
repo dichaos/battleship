@@ -5,9 +5,9 @@ namespace Battleship
 {
     public class HumanPlayer : IPlayer
     {
-        private IBoardDrawer _boardDrawer;
-        private IBattleField _battleField;
-        private IShipPlacer _shipPlacer;
+        private readonly IBoardDrawer _boardDrawer;
+        private readonly IBattleField _battleField;
+        private readonly IShipPlacer _shipPlacer;
 
         public string Name => "Human";
 
@@ -41,7 +41,7 @@ namespace Battleship
             }
 
             if (strInput[0] == 'A' ||
-               strInput[0] == 'B' ||
+                strInput[0] == 'B' ||
                 strInput[0] == 'C' ||
                 strInput[0] == 'D' ||
                 strInput[0] == 'E' ||
@@ -51,7 +51,7 @@ namespace Battleship
                 strInput[0] == 'I' ||
                 strInput[0] == 'J' ||
                 strInput[0] == 'a' ||
-               strInput[0] == 'b' ||
+                strInput[0] == 'b' ||
                 strInput[0] == 'c' ||
                 strInput[0] == 'd' ||
                 strInput[0] == 'e' ||
@@ -61,11 +61,10 @@ namespace Battleship
                 strInput[0] == 'i' ||
                 strInput[0] == 'j')
                 return true;
-
-
+            
             return false;
-
         }
+
         private int[] GetInput()
         {
             string strInput = Console.ReadLine();

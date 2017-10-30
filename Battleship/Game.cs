@@ -7,8 +7,8 @@ namespace Battleship
 {
     public class Game
     {
-        private IPlayer _player1;
-        private IPlayer _player2;
+        private readonly IPlayer _player1;
+        private readonly IPlayer _player2;
 
         public Game(IPlayer player1, IPlayer player2)
         {
